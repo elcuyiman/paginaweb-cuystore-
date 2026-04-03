@@ -1,0 +1,261 @@
+/* --- Ocultar la barra de desplazamiento (Scrollbar) --- */
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* --- Variables de Color (Estilo Gamer/Oscuro) --- */
+:root {
+    --fondo-principal: #121212;
+    --fondo-secundario: #1e1e1e;
+    --color-acento: #e50914; /* Rojo tipo gaming */
+    --texto-principal: #ffffff;
+    --texto-secundario: #b3b3b3;
+    --borde: #333333;
+}
+
+/* Reseteo básico y tipografía moderna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* --- Encabezado y Navegación --- */
+header {
+    background-color: var(--fondo-secundario);
+    border-bottom: 2px solid var(--color-acento);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--color-acento);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-acento);
+}
+
+/* --- Sección Hero (Bienvenida) --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, var(--fondo-secundario), var(--fondo-principal));
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Títulos de Sección --- */
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.titulo-seccion::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-acento);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Espaciado general de las secciones */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Sistema de Grid Responsivo --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- Tarjetas de Videos --- */
+.video-card {
+    background-color: var(--fondo-secundario);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+video, iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    border: none;
+}
+
+/* --- Tarjetas de Productos --- */
+.producto {
+    background-color: var(--fondo-secundario);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--borde);
+    transition: all 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.3);
+    border-color: var(--color-acento);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.precio {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+/* --- Formulario de Contacto --- */
+.seccion-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fondo-secundario);
+    border-radius: 15px;
+    padding: 50px 20px;
+    margin-bottom: 60px;
+}
+
+.subtitulo-contacto {
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.campo input, .campo textarea {
+    padding: 12px;
+    background-color: var(--fondo-principal);
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    color: var(--texto-principal);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.campo input:focus, .campo textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+.btn-enviar {
+    padding: 15px 20px;
+    background-color: var(--color-acento);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+.btn-enviar:hover {
+    background-color: #b30710;
+    transform: scale(1.02);
+}
+
+/* --- Pie de página --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #0a0a0a;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--borde);
+}
