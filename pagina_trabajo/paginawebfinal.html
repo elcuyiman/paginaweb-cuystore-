@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuyis Store - Tu entretención total</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="progreso-contenedor">
+        <div class="barra-progreso" id="miBarra"></div>
+    </div>
+
+    <header>
+        <div class="header-contenido">
+            <h1>Cuyis Store</h1>
+            <nav>
+                <a href="#videos">Videos</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Bienvenido a Cuyis Store</h2>
+            <p>Encuentra los mejores precios en nuestra tienda, busca entre todos los juegos disponibles y llévate un gran descuento.</p>
+        </section>
+
+        <section id="videos" class="videos-semana">
+            <h2 class="titulo-seccion">Juegos de la semana</h2>
+            <div class="grid-container">
+                <div class="video-card">
+                    <video src="videos/YTDown.com_YouTube_Resident-Evil-Requiem-Reveal-Trailer_Media_POz1-EmLsTY_004_360p.mp4" controls required></video>
+                    
+                </div>
+                <div class="video-card">
+                    <video src="videos/YTDown.com_YouTube_Grand-Theft-Auto-VI-Trailer-2_Media_VQRLujxTm3c_004_360p.mp4" controls></video>
+                </div>
+                <div class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CMjNBDq6lnQ?si=CEaP7sadt5YNZUdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="seccion-productos">
+            <h2 class="titulo-seccion">Productos disponibles</h2>
+            <div class="grid-container">
+                <div class="producto">
+                    <img src="img/residentevilrequienm.jpg" alt="Resident Evil Requiem">
+                    <h3>Resident Evil Requiem</h3>
+                    <span class="precio">$60.990</span>
+                </div>
+                <div class="producto">
+                    <img src="img/gta6.jpg" alt="Grand Theft Auto VI">
+                    <h3>Grand Theft Auto VI</h3>
+                    <span class="precio">$89.990</span>
+                </div>
+                <div class="producto">
+                    <img src="img/dmc5.jpg" alt="Devil May Cry 5">
+                    <h3>Devil May Cry 5</h3>
+                    <span class="precio">$25.990</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <p class="subtitulo-contacto">¿Dudas o sugerencias? Escríbenos.</p>
+            <form action="gracias.html" method="GET" class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cuyis Store. Todos los derechos reservados.</p>
+    </footer>
+    
+    <button id="btnSubir" title="Volver arriba">⬆️</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
